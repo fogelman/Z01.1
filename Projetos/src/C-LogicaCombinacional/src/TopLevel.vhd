@@ -38,6 +38,6 @@ architecture rtl of TopLevel is
 ---------------
 begin
  
-  LEDR(0) <= SW(0);
+  LEDR(9 downto 0) <= not SW(9 downto 0);
 
 end rtl;
