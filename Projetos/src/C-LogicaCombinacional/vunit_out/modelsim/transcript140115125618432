@@ -1,0 +1,30 @@
+# do /home/paineira/.local/lib/python3.5/site-packages/vunit/tcl_read_eval_loop.tcl
+# vsim -modelsimini /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_dmux4way.all_8ba639f56fefebe7cb91cce60b081c070576fecc/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_dmux4way(tb) -L vunit_lib -L lib -g/tb_dmux4way/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_dmux4way.all_8ba639f56fefebe7cb91cce60b081c070576fecc/,tb path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true" 
+# Start time: 11:49:53 on Aug 27,2018
+# ** Warning: Design size of 20570 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# ** Error: Falha em teste: 1
+#    Time: 500 ps  Iteration: 1  Process: /tb_dmux4way/main File: /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd
+# Break in Process main at /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd line 54
+# Stopped at /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd line 54
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd 54 return [address 0xf6e30711] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   49 :     test_runner_setup(runner, runner_cfg);
+#   50 : 
+#   51 :     -- Teste: 1
+#   52 :     inA <= '1'; inSel <= "00";
+#   53 :     wait until clk='1' ;
+# ->54 :     assert(outQ0='1' and outQ1='0' and outQ2='0' and outQ3='0')  report "Falha em teste: 1" severity error;
+#   55 : 
+#   56 :     -- Teste: 2
+#   57 :     inA <= '1'; inSel<= "01";
+#   58 :     wait until clk='1' ;
+# 
+# End time: 11:49:53 on Aug 27,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
