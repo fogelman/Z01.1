@@ -116,7 +116,7 @@ R8
 Artl
 R2
 R3
-Z18 DEx4 work 8 dmux4way 0 22 chCWhU[f@SDYOfM[z`KAD3
+DEx4 work 8 dmux4way 0 22 chCWhU[f@SDYOfM[z`KAD3
 l14
 L13
 V;8`a3iHjML8mKITMdLo[]2
@@ -132,23 +132,41 @@ R17
 R7
 R8
 Edmux8way
-R1
+Z18 w1535383348
 R2
 R3
 R0
-8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd
-F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd
+Z19 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd
+Z20 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd
 l0
 L4
-V4@:^4]]>d5jd<9PRAJQi32
-!s100 zC5^AWzR72_D_1oKAO8`>2
+VPRJClE9BZeXMhW]mzL<^c1
+!s100 4i3?gXoYf<NZISbbjSY@^2
 R4
 33
-R10
+Z21 !s110 1535388884
 !i10b 1
-R9
-!s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd|
-!s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd|
+Z22 !s108 1535388884.000000
+Z23 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd|
+Z24 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/DMux8Way.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R2
+R3
+DEx4 work 8 dmux8way 0 22 PRJClE9BZeXMhW]mzL<^c1
+l18
+L18
+Vg7?9Nb0PLNckKHH9A80jH0
+!s100 ^TnO_<E>9C42;gi5iBbS;0
+R4
+33
+R21
+!i10b 1
+R22
+R23
+R24
 !i113 1
 R7
 R8
@@ -195,23 +213,41 @@ R9
 R7
 R8
 Emux4way
-R1
+Z25 w1535388782
 R2
 R3
 R0
-8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd
-F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd
+Z26 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd
+Z27 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd
 l0
 L4
 VS6DJa:23Uele:d0oQjjO[0
 !s100 X`n8^nYIhlnNgIfP_EkID1
 R4
 33
-R10
+R21
 !i10b 1
-R9
-!s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd|
-!s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd|
+R22
+Z28 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd|
+Z29 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux4Way.vhd|
+!i113 1
+R7
+R8
+Artl
+R2
+R3
+DEx4 work 7 mux4way 0 22 S6DJa:23Uele:d0oQjjO[0
+l15
+L13
+VQSJ4<mY57mBMa>OTaOdaC0
+!s100 D2O48A=ge<:Ke?bfGX0N30
+R4
+33
+R21
+!i10b 1
+R22
+R28
+R29
 !i113 1
 R7
 R8
@@ -237,23 +273,23 @@ R9
 R7
 R8
 Emux8way
-Z19 w1535381403
+Z30 w1535381403
 R2
 R3
 R0
-Z20 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd
-Z21 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd
+Z31 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd
+Z32 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd
 l0
 L4
 VcMIZim^j_>0TGlG7NC03C3
 !s100 ^ag5`^MlkFaAfCaX]@3>L0
 R4
 33
-Z22 !s110 1535381407
+Z33 !s110 1535381407
 !i10b 1
-Z23 !s108 1535381407.000000
-Z24 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd|
-Z25 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd|
+Z34 !s108 1535381407.000000
+Z35 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd|
+Z36 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Mux8Way.vhd|
 !i113 1
 R7
 R8
@@ -267,11 +303,11 @@ VeeUV8;D8WmTG[5[UH;NIJ1
 !s100 U6fmB3;<ZD7SmFYlhf=e>0
 R4
 33
-R22
+R33
 !i10b 1
-R23
-R24
-R25
+R34
+R35
+R36
 !i113 1
 R7
 R8
@@ -301,8 +337,8 @@ R1
 R2
 R3
 R0
-Z26 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd
-Z27 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd
+Z37 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd
+Z38 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd
 l0
 L4
 VZAa9lEVIbjNoh=QoV_ANf0
@@ -311,9 +347,9 @@ R4
 33
 R10
 !i10b 1
-Z28 !s108 1535121072.000000
-Z29 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd|
-Z30 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd|
+Z39 !s108 1535121072.000000
+Z40 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd|
+Z41 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nand.vhd|
 !i113 1
 R7
 R8
@@ -329,9 +365,9 @@ R4
 33
 R10
 !i10b 1
-R28
-R29
-R30
+R39
+R40
+R41
 !i113 1
 R7
 R8
@@ -348,9 +384,9 @@ VI6@ZGJd>JSC7UGzNAn6GU2
 !s100 bzc2JH[>FOP2l:COLj<IY2
 R4
 33
-Z31 !s110 1535121072
+Z42 !s110 1535121072
 !i10b 1
-R28
+R39
 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nor8Way.vhd|
 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Nor8Way.vhd|
 !i113 1
@@ -369,32 +405,32 @@ VC]SG@M]l`d<egUIK]zP2?0
 !s100 fYJ1`YCnUZe9F?2KLeD4V3
 R4
 33
-R31
+R42
 !i10b 1
-R28
+R39
 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Not16.vhd|
 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Not16.vhd|
 !i113 1
 R7
 R8
 Eor16
-Z32 w1535123349
+Z43 w1535123349
 R2
 R3
 R0
-Z33 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd
-Z34 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd
+Z44 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd
+Z45 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd
 l0
 L4
 VFm015BPNjKE2P[ZaFANAP1
 !s100 >QKR87GJWMdVLQz<g8^hf0
 R4
 33
-Z35 !s110 1535378285
+Z46 !s110 1535378285
 !i10b 1
-Z36 !s108 1535378284.000000
-Z37 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd|
-Z38 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd|
+Z47 !s108 1535378284.000000
+Z48 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd|
+Z49 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or16.vhd|
 !i113 1
 R7
 R8
@@ -408,106 +444,109 @@ V8Fk29:W_5HcWH64M=a65W2
 !s100 Cj4JU5:?dBE4Ogc[^G9oa1
 R4
 33
-R35
+R46
 !i10b 1
-R36
-R37
-R38
+R47
+R48
+R49
 !i113 1
 R7
 R8
 Eor8way
-R1
+R18
 R2
 R3
 R0
-8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd
-F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd
+Z50 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd
+Z51 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd
 l0
 L4
 V6_>9FK_U9`n7]^73i4MMa1
 !s100 Ag3dFfPkCD2FhoYEajciW3
 R4
 33
-R31
+R21
 !i10b 1
-R28
-!s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd|
-!s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd|
+R22
+Z52 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd|
+Z53 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/src/rtl/Or8Way.vhd|
+!i113 1
+R7
+R8
+Artl
+R2
+R3
+DEx4 work 6 or8way 0 22 6_>9FK_U9`n7]^73i4MMa1
+l19
+L17
+V09UihdP2oi_AFn1R;BJkX1
+!s100 @4eoF??jEiK@TzCOk0:O?0
+R4
+33
+R21
+!i10b 1
+R22
+R52
+R53
 !i113 1
 R7
 R8
 Etb_dmux4way
 R1
-Z39 D^#x9 vunit_lib 13 vunit_context 0 22 5PF4h;N3nzRfAo898Q8WS3
-Z40 DPx9 vunit_lib 18 run_deprecated_pkg 0 22 06HHNn=l0Y?PoSLo8^<h00
-Z41 DPx9 vunit_lib 10 runner_pkg 0 22 z^:Vg[9OdL73Ud]@[WY>01
-Z42 DPx9 vunit_lib 7 run_pkg 0 22 8n8O1i_^2ldC;;F>MQH=X0
-Z43 DPx9 vunit_lib 13 run_types_pkg 0 22 GM9GODQ5LISU7ld;2X8cm0
-Z44 DPx9 vunit_lib 20 check_deprecated_pkg 0 22 Y>TVz>[kI8XoP@P02gCOJ2
-Z45 DPx9 vunit_lib 9 check_pkg 0 22 k_?TDGU?=n?1Z0oahO>zF0
-Z46 DPx9 vunit_lib 11 checker_pkg 0 22 E?dhhcE;9VWnHLW[lW4`Y1
-Z47 DPx9 vunit_lib 8 stop_pkg 0 22 UjKiHFdPQ97>_>m`nM3cg3
-Z48 DPx9 vunit_lib 8 core_pkg 0 22 0M7EG>QDghVT?B78KOYPn0
-Z49 DPx9 vunit_lib 18 log_deprecated_pkg 0 22 Q7[lfBh_WC:ca^W64YP1U2
-Z50 DPx9 vunit_lib 9 print_pkg 0 22 z3A9G[B4JdMci]Ub;PK=S3
-Z51 DPx9 vunit_lib 4 path 0 22 ]@TR:IFM`TWfiVL<ZjY=I3
-Z52 DPx9 vunit_lib 15 log_handler_pkg 0 22 nl_I;6SFb6@cB[0oB[Gm?1
-Z53 DPx9 vunit_lib 8 ansi_pkg 0 22 h9cG]NHf=IYSX>SV5U_OM1
-Z54 DPx9 vunit_lib 14 log_levels_pkg 0 22 jGUFnEUH1mU?HKm3YRPGj3
-Z55 DPx9 vunit_lib 10 logger_pkg 0 22 Jj3MC9=bR4jQbFA1jSDXY2
-Z56 DPx9 vunit_lib 10 dictionary 0 22 _W8>On_YoEFWEDP8TQC@R0
-Z57 DPx9 vunit_lib 10 string_ops 0 22 >6lVd?dSYVCeeU;1?_=bg2
-Z58 D^#x9 vunit_lib 18 data_types_context 0 22 1?>9FT=3YA15`7IYa:H9b2
-Z59 DPx9 vunit_lib 8 dict_pkg 0 22 ehbf8zR4VgoO:66`0b==c3
-Z60 DPx9 vunit_lib 19 string_ptr_pool_pkg 0 22 I^`873Q>JaL`RoU3I`C2H1
-Z61 DPx9 vunit_lib 14 queue_pool_pkg 0 22 Z[=D0HJacYBCm0dE3aodk1
-Z62 DPx9 vunit_lib 17 integer_array_pkg 0 22 CJcNR>m;3A:?0bl`^YYN^0
-Z63 DPx9 vunit_lib 14 string_ptr_pkg 0 22 BcAU_Z][LeU1aR2CQKdF;1
-Z64 DPx9 vunit_lib 9 queue_pkg 0 22 5HPC^C7JS]n`QizJndW4Y2
-Z65 DPx9 vunit_lib 27 integer_vector_ptr_pool_pkg 0 22 >4MC1]6h[egYG8GmK_OaU3
-Z66 DPx9 vunit_lib 17 codec_builder_pkg 0 22 lMzaQB]AGo[9c?7g60J_93
-Z67 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z68 DPx4 ieee 11 numeric_bit 0 22 d<O?S;AIQfOzoHU3FDK]23
-Z69 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
-Z70 DPx4 ieee 12 math_complex 0 22 5i:;_e<WQ2;?b7>BdkGQL0
-Z71 DPx9 vunit_lib 9 codec_pkg 0 22 VE]>YKnj@eiUJ<U1YSEXb3
-Z72 DPx9 vunit_lib 22 integer_vector_ptr_pkg 0 22 KNo?M3?g8Rc_m:IGUMQ<m0
+Z54 D^#x9 vunit_lib 13 vunit_context 0 22 5PF4h;N3nzRfAo898Q8WS3
+Z55 DPx9 vunit_lib 18 run_deprecated_pkg 0 22 06HHNn=l0Y?PoSLo8^<h00
+Z56 DPx9 vunit_lib 10 runner_pkg 0 22 z^:Vg[9OdL73Ud]@[WY>01
+Z57 DPx9 vunit_lib 7 run_pkg 0 22 8n8O1i_^2ldC;;F>MQH=X0
+Z58 DPx9 vunit_lib 13 run_types_pkg 0 22 GM9GODQ5LISU7ld;2X8cm0
+Z59 DPx9 vunit_lib 20 check_deprecated_pkg 0 22 Y>TVz>[kI8XoP@P02gCOJ2
+Z60 DPx9 vunit_lib 9 check_pkg 0 22 k_?TDGU?=n?1Z0oahO>zF0
+Z61 DPx9 vunit_lib 11 checker_pkg 0 22 E?dhhcE;9VWnHLW[lW4`Y1
+Z62 DPx9 vunit_lib 8 stop_pkg 0 22 UjKiHFdPQ97>_>m`nM3cg3
+Z63 DPx9 vunit_lib 8 core_pkg 0 22 0M7EG>QDghVT?B78KOYPn0
+Z64 DPx9 vunit_lib 18 log_deprecated_pkg 0 22 Q7[lfBh_WC:ca^W64YP1U2
+Z65 DPx9 vunit_lib 9 print_pkg 0 22 z3A9G[B4JdMci]Ub;PK=S3
+Z66 DPx9 vunit_lib 4 path 0 22 ]@TR:IFM`TWfiVL<ZjY=I3
+Z67 DPx9 vunit_lib 15 log_handler_pkg 0 22 nl_I;6SFb6@cB[0oB[Gm?1
+Z68 DPx9 vunit_lib 8 ansi_pkg 0 22 h9cG]NHf=IYSX>SV5U_OM1
+Z69 DPx9 vunit_lib 14 log_levels_pkg 0 22 jGUFnEUH1mU?HKm3YRPGj3
+Z70 DPx9 vunit_lib 10 logger_pkg 0 22 Jj3MC9=bR4jQbFA1jSDXY2
+Z71 DPx9 vunit_lib 10 dictionary 0 22 _W8>On_YoEFWEDP8TQC@R0
+Z72 DPx9 vunit_lib 10 string_ops 0 22 >6lVd?dSYVCeeU;1?_=bg2
+Z73 D^#x9 vunit_lib 18 data_types_context 0 22 1?>9FT=3YA15`7IYa:H9b2
+Z74 DPx9 vunit_lib 8 dict_pkg 0 22 ehbf8zR4VgoO:66`0b==c3
+Z75 DPx9 vunit_lib 19 string_ptr_pool_pkg 0 22 I^`873Q>JaL`RoU3I`C2H1
+Z76 DPx9 vunit_lib 14 queue_pool_pkg 0 22 Z[=D0HJacYBCm0dE3aodk1
+Z77 DPx9 vunit_lib 17 integer_array_pkg 0 22 CJcNR>m;3A:?0bl`^YYN^0
+Z78 DPx9 vunit_lib 14 string_ptr_pkg 0 22 BcAU_Z][LeU1aR2CQKdF;1
+Z79 DPx9 vunit_lib 9 queue_pkg 0 22 5HPC^C7JS]n`QizJndW4Y2
+Z80 DPx9 vunit_lib 27 integer_vector_ptr_pool_pkg 0 22 >4MC1]6h[egYG8GmK_OaU3
+Z81 DPx9 vunit_lib 17 codec_builder_pkg 0 22 lMzaQB]AGo[9c?7g60J_93
+Z82 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z83 DPx4 ieee 11 numeric_bit 0 22 d<O?S;AIQfOzoHU3FDK]23
+Z84 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z85 DPx4 ieee 12 math_complex 0 22 5i:;_e<WQ2;?b7>BdkGQL0
+Z86 DPx9 vunit_lib 9 codec_pkg 0 22 VE]>YKnj@eiUJ<U1YSEXb3
+Z87 DPx9 vunit_lib 22 integer_vector_ptr_pkg 0 22 KNo?M3?g8Rc_m:IGUMQ<m0
 R2
 R3
 R0
-Z73 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd
-Z74 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd
+Z88 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd
+Z89 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd
 l0
 L12
 V`Ee`nD5m75@]0SXha_9SP1
 !s100 5L:fMX;o]V`Iz=oWiK7[U2
 R4
 33
-Z75 !s110 1535378683
+Z90 !s110 1535378683
 !i10b 1
-Z76 !s108 1535378682.000000
-Z77 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd|
-Z78 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd|
+Z91 !s108 1535378682.000000
+Z92 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd|
+Z93 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_DMux4Way.vhd|
 !i113 1
 R7
 R8
 Atb
-R39
-R40
-R41
-R42
-R43
-R44
-R45
-R46
-R47
-R48
-R49
-R50
-R51
-R52
-R53
 R54
 R55
 R56
@@ -527,6 +566,21 @@ R69
 R70
 R71
 R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
 R2
 R3
 DEx4 work 11 tb_dmux4way 0 22 `Ee`nD5m75@]0SXha_9SP1
@@ -536,31 +590,16 @@ VSM[4jB<_PLa9jmAFkgWGh3
 !s100 [YVIiZd:^?CfOM_1KRJ6D1
 R4
 33
-R75
+R90
 !i10b 1
-R76
-R77
-R78
+R91
+R92
+R93
 !i113 1
 R7
 R8
-Etb_mux8way
+Etb_mux4way
 R1
-R39
-R40
-R41
-R42
-R43
-R44
-R45
-R46
-R47
-R48
-R49
-R50
-R51
-R52
-R53
 R54
 R55
 R56
@@ -580,41 +619,148 @@ R69
 R70
 R71
 R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
 R2
 R3
 R0
-Z79 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd
-Z80 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd
+Z94 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux4Way.vhd
+Z95 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux4Way.vhd
+l0
+L12
+VAda6XcZ=REYG4gJAeGf1g1
+!s100 jG^of^A;C2;2>ja<A[@JO0
+R4
+33
+R21
+!i10b 1
+R22
+Z96 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux4Way.vhd|
+Z97 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux4Way.vhd|
+!i113 1
+R7
+R8
+Atb
+R54
+R55
+R56
+R57
+R58
+R59
+R60
+R61
+R62
+R63
+R64
+R65
+R66
+R67
+R68
+R69
+R70
+R71
+R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
+R2
+R3
+DEx4 work 10 tb_mux4way 0 22 Ada6XcZ=REYG4gJAeGf1g1
+l35
+L16
+VX`8@PBLHzYTLa?JdIbHE03
+!s100 gXA=dn=b>Z2@hV2`gc]:U1
+R4
+33
+R21
+!i10b 1
+R22
+R96
+R97
+!i113 1
+R7
+R8
+Etb_mux8way
+R1
+R54
+R55
+R56
+R57
+R58
+R59
+R60
+R61
+R62
+R63
+R64
+R65
+R66
+R67
+R68
+R69
+R70
+R71
+R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
+R2
+R3
+R0
+Z98 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd
+Z99 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd
 l0
 L12
 VPDf@K^Ye<I;N8zF2dLHNh1
 !s100 [UnHZFZVDODn]FGh@[^VQ1
 R4
 33
-Z81 !s110 1535381390
+Z100 !s110 1535381390
 !i10b 1
-Z82 !s108 1535381390.000000
-Z83 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd|
-Z84 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd|
+Z101 !s108 1535381390.000000
+Z102 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd|
+Z103 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Mux8Way.vhd|
 !i113 1
 R7
 R8
 Atb
-R39
-R40
-R41
-R42
-R43
-R44
-R45
-R46
-R47
-R48
-R49
-R50
-R51
-R52
-R53
 R54
 R55
 R56
@@ -634,6 +780,21 @@ R69
 R70
 R71
 R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
 R2
 R3
 DEx4 work 10 tb_mux8way 0 22 PDf@K^Ye<I;N8zF2dLHNh1
@@ -643,31 +804,16 @@ V3_LaUF7iL>5=1L3dVWMmb1
 !s100 egl4lWEKo9bzC^cB7e0>S3
 R4
 33
-R81
+R100
 !i10b 1
-R82
-R83
-R84
+R101
+R102
+R103
 !i113 1
 R7
 R8
 Etb_nand
 R1
-R39
-R40
-R41
-R42
-R43
-R44
-R45
-R46
-R47
-R48
-R49
-R50
-R51
-R52
-R53
 R54
 R55
 R56
@@ -687,41 +833,41 @@ R69
 R70
 R71
 R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
 R2
 R3
 R0
-Z85 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd
-Z86 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd
+Z104 8/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd
+Z105 F/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd
 l0
 L12
 VnQ]o>b3kU]B^zW0_j^FD=0
 !s100 aMe6E3WRV^[86=G6LDNL=3
 R4
 33
-Z87 !s110 1535121080
+Z106 !s110 1535121080
 !i10b 1
-Z88 !s108 1535121080.000000
-Z89 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd|
-Z90 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd|
+Z107 !s108 1535121080.000000
+Z108 !s90 -quiet|-modelsimini|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini|-2008|-work|lib|/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd|
+Z109 !s107 /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/tb_Nand.vhd|
 !i113 1
 R7
 R8
 Atb
-R39
-R40
-R41
-R42
-R43
-R44
-R45
-R46
-R47
-R48
-R49
-R50
-R51
-R52
-R53
 R54
 R55
 R56
@@ -741,6 +887,21 @@ R69
 R70
 R71
 R72
+R73
+R74
+R75
+R76
+R77
+R78
+R79
+R80
+R81
+R82
+R83
+R84
+R85
+R86
+R87
 R2
 R3
 DEx4 work 7 tb_nand 0 22 nQ]o>b3kU]B^zW0_j^FD=0
@@ -750,11 +911,11 @@ VbzID6hG8b?2Q55V=8;RbM3
 !s100 G3Wn5ImGc_F:Sh_?JSb9G3
 R4
 33
-R87
+R106
 !i10b 1
-R88
-R89
-R90
+R107
+R108
+R109
 !i113 1
 R7
 R8
