@@ -13,4 +13,16 @@ entity DMux8Way is
 			q5:  out STD_LOGIC;
 			q6:  out STD_LOGIC;
 			q7:  out STD_LOGIC);
-end entity;
+end DMux8Way;
+
+architecture behavioral of DMux8Way is begin
+
+q0 <= a when sel = "000" else '0';
+q1 <= a when sel = "001" else '0';
+q2 <= a when sel = "010" else '0';
+q3 <= a when sel = "011" else '0';
+q4 <= a when sel = "100" else '0';
+q5 <= a when sel = "101" else '0';
+q6 <= a when sel = "110" else '0';
+q7 <= a when sel = "111" else '0';
+end behavioral;
