@@ -12,4 +12,10 @@ entity Nor8Way is
 			g:   in  STD_LOGIC;
 			h:   in  STD_LOGIC;
 			q:   out STD_LOGIC);
-end entity;
+end Nor8Way;
+
+architecture behavior of Nor8Way is
+begin
+	q <=not( a or b or c or d or e or f or g or h);
+
+end behavior;
