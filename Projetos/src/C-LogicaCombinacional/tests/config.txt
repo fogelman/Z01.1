@@ -11,7 +11,7 @@
 #Nand.vhd
 #Nor8Way.vhd
 #And16.vhd
-#Not16.vhd
+Not16.vhd
 #Or8Way.vhd
 #Or16.vhd
 #DMux2Way.vhd
