@@ -8,3 +8,16 @@ entity Mux2Way is
 			sel: in  STD_LOGIC;
 			q:   out STD_LOGIC);
 end entity;
+
+architecture rtl of Mux2Way is
+
+begin
+	process(a,b,sel)
+	begin
+		if (sel = '0') then
+			q <= a;
+		elsif (sel = '1') then
+			q <= b;
+		end if;
+	end process;
+end rtl;
