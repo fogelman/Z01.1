@@ -44,3 +44,4 @@ before_script:
 script:
   - python Projetos/src/0-Infra/testeVHDL.py
   - python Projetos/src/C-LogicaCombinacional/testeLogicaCombinacional.py
+  - python Projetos/src/D-UnidadeLogicaAritmetica/testeULA.py
