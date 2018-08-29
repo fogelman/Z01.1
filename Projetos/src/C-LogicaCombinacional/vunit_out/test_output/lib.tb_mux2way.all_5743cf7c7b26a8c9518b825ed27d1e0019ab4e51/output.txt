@@ -1,6 +1,0 @@
-# vsim -modelsimini /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux2way.all_5743cf7c7b26a8c9518b825ed27d1e0019ab4e51/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_mux2way(tb) -L vunit_lib -L lib -g/tb_mux2way/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux2way.all_5743cf7c7b26a8c9518b825ed27d1e0019ab4e51/,tb path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true" 
-# Start time: 11:05:18 on Aug 29,2018
-# ** Warning: Design size of 20696 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# Break in Subprogram stop at /home/paineira/.local/lib/python3.5/site-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 13
-# Stopped at /home/paineira/.local/lib/python3.5/site-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 13

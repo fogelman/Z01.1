@@ -1,9 +1,0 @@
-# do /home/paineira/.local/lib/python3.5/site-packages/vunit/tcl_read_eval_loop.tcl
-# vsim -modelsimini /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_not16.all_b66b8fc9277e1e3933979f97f1cdc6fc5d49fe3e/modelsim/vsim.wlf -quiet -t ps -onfinish stop lib.tb_not16(tb) -L vunit_lib -L lib -g/tb_not16/runner_cfg="active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_not16.all_b66b8fc9277e1e3933979f97f1cdc6fc5d49fe3e/,tb path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true" 
-# Start time: 10:56:33 on Aug 29,2018
-# ** Warning: Design size of 20683 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
-# Expect performance to be adversely affected.
-# Break in Subprogram stop at /home/paineira/.local/lib/python3.5/site-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 13
-# Stopped at /home/paineira/.local/lib/python3.5/site-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 13
-# End time: 10:56:34 on Aug 29,2018, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 1
