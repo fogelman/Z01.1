@@ -40,11 +40,11 @@ proc _vunit_source_init_files_after_load {} {
 
 proc vunit_load {{vsim_extra_args ""}} {
     set vsim_failed [catch {
-        eval vsim ${vsim_extra_args} {-modelsimini /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf {/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/modelsim/vsim.wlf} -quiet -t ps -onfinish stop  -g/tb_mux4way/runner_cfg={"active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/,tb path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true"} lib.tb_mux4way(tb)   -L vunit_lib -L lib}
+        eval vsim ${vsim_extra_args} {-modelsimini /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf {/home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/modelsim/vsim.wlf} -quiet -t ps -onfinish stop  -g/tb_mux4way/runner_cfg={"active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/,tb path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true"} lib.tb_mux4way(tb)   -L vunit_lib -L lib}
     }]
 
     if {${vsim_failed}} {
-       echo Command 'vsim ${vsim_extra_args} -modelsimini /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf {/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/modelsim/vsim.wlf} -quiet -t ps -onfinish stop  -g/tb_mux4way/runner_cfg={"active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/,tb path : /home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true"} lib.tb_mux4way(tb)   -L vunit_lib -L lib' failed
+       echo Command 'vsim ${vsim_extra_args} -modelsimini /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/modelsim/modelsim.ini -wlf {/home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/modelsim/vsim.wlf} -quiet -t ps -onfinish stop  -g/tb_mux4way/runner_cfg={"active python runner : true,enabled_test_cases : ,output path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/,tb path : /home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/tests/tst/,use_color : true"} lib.tb_mux4way(tb)   -L vunit_lib -L lib' failed
        echo Bad flag from vsim_extra_args?
        return true
     }
@@ -67,7 +67,7 @@ proc vunit_load {{vsim_extra_args ""}} {
 }
 
 proc is_test_suite_done {} {
-    set fd [open "/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/vunit_results" "r"]
+    set fd [open "/home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional/vunit_out/test_output/lib.tb_mux4way.all_eb305fd8bfee2240fe2d11f62749d522292ea5cb/vunit_results" "r"]
     set contents [read $fd]
     close $fd
     set lines [split $contents "
@@ -110,7 +110,7 @@ proc vunit_compile {} {
     set cmd_show {/usr/bin/python3 -u ./testeLogicaCombinacional.py --compile}
     puts "Re-compiling using command ${cmd_show}"
 
-    set chan [open |[list {/usr/bin/python3} {-u} {-c} {import sys;import subprocess;exit(subprocess.call(['/usr/bin/python3', '-u', './testeLogicaCombinacional.py', '--compile'], cwd='/home/paineira/Documents/Insper/Elementos/Z01.1/Projetos/src/C-LogicaCombinacional', bufsize=0, universal_newlines=True, stdout=sys.stdout, stderr=sys.stdout))}] r]
+    set chan [open |[list {/usr/bin/python3} {-u} {-c} {import sys;import subprocess;exit(subprocess.call(['/usr/bin/python3', '-u', './testeLogicaCombinacional.py', '--compile'], cwd='/home/paineira/Documents/Z01.1/Projetos/src/C-LogicaCombinacional', bufsize=0, universal_newlines=True, stdout=sys.stdout, stderr=sys.stdout))}] r]
 
     while {[gets $chan line] >= 0} {
         puts $line
