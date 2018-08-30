@@ -1,6 +1,3 @@
--- Elementos de Sistemas
--- by Luciano Soares
--- inversor16.vhd
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
@@ -12,8 +9,13 @@ entity inversor16 is
    );
 end entity;
 
-architecture rtl of inversor16 is
+architecture rtl of inversor16 is 
 
 begin
 
+	y <= a when z = '0' else not a;
+
+
+
 end architecture;
+
