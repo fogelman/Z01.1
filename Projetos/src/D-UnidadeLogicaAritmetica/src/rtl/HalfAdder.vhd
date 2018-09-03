@@ -15,7 +15,8 @@ entity HalfAdder is
 end entity;
 
 architecture rtl of HalfAdder is
-
+ 
 begin
-
-end architecture;
+  soma   <= a xor b;
+  vaium <= a and b;
+end rtl;
