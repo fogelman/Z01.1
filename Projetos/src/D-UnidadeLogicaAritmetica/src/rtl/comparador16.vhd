@@ -37,8 +37,3 @@ begin
 	ng <= a(15) ;
 
 end rtl;
-
-
-begin
-
-end architecture;
