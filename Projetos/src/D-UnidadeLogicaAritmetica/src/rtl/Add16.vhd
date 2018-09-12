@@ -25,15 +25,10 @@ component FullAdder is
 	);
 end component;
 
-<<<<<<< HEAD
+
 signal c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16 : std_logic:='0';
-=======
-signal s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16 : std_logic:='0';
->>>>>>> 4a976c4c6cbb0f44d21a79591e8dea54de2d54e1
 
 begin
-
-
 	d : FullAdder port map (a(0),b(0),'0',q(0),c1);
 	e : FullAdder port map (a(1),b(1),c1,q(1),c2);
 	f : FullAdder port map (a(2),b(2),c2,q(2),c3);
@@ -48,17 +43,8 @@ begin
 	o : FullAdder port map (a(11),b(11),c11,q(11),c12);
 	p : FullAdder port map (a(12),b(12),c12,q(12),c13);
 	z : FullAdder port map (a(13),b(13),c13,q(13),c14);
-<<<<<<< HEAD
 	r : FullAdder port map (a(14),b(14),c14,q(14),c15);
 	s : FullAdder port map (a(15),b(15),c15,q(15),c16);
-
-
-=======
-	r : FullAdder port map (a(14),b(14),c14,q(14),c15); 
-	s : FullAdder port map (a(15),b(15),c15,q(15),c16);
-
-	 
->>>>>>> 4a976c4c6cbb0f44d21a79591e8dea54de2d54e1
 
 end architecture;
 
