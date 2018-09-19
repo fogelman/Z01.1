@@ -9,13 +9,10 @@ entity inversor16 is
    );
 end entity;
 
-architecture rtl of inversor16 is 
+architecture rtl of inversor16 is
 
 begin
 
 	y <= a when z = '0' else not a;
 
-
-
 end architecture;
-
