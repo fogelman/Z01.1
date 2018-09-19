@@ -28,6 +28,7 @@ sys.path.insert(0,PROJ_D_PATH)
 from testeVHDL import vhdlScript
 from testeLogicaCombinacional import tstLogiComb
 from testeULA import tstUla
+from report import report
 ##################################################
 
 class tstLogiSeq(object):
@@ -67,5 +68,12 @@ if __name__ == "__main__":
     tstLogiSeq.add(tstLogiSeq.work)
     tstLogiSeq.work.run()
 
+    print("===================================================")
+    print("Reporting test result to server")
+    r = report(tstLogiSeq.log, 'E')
+    error = r.hw()
+    r.send()
+    sys.exit(error)
+    print("===================================================")
 
 
