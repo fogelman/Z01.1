@@ -17,6 +17,13 @@ end entity;
 
 architecture arch of FlipFlopD is
 begin
-
+	
+	if (rising_edge(clock)) then
+		q <= d;
+	elsif (clear = '1') then
+		q <= '0';
+	elsif (preset = '1') then
+		q <= '1';
+	end if;
 
 end architecture;
