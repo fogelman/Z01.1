@@ -13,3 +13,24 @@ entity Register16 is
 		output: out STD_LOGIC_VECTOR(15 downto 0)
 	);
 end entity;
+
+architecture behavior of Register16 is
+
+    signal temp: std_logic_vector(15 downto 0);
+
+begin
+
+    process(clock, input, load)
+    begin
+
+	if (clock='1' and clock'event) then
+	    if load = '1' then
+		temp <= input;
+	    end if;
+	end if;
+
+    end process;
+
+    output <= temp;
+
+end behavior;
