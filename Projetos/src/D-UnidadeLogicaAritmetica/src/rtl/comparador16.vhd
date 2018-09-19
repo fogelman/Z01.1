@@ -15,7 +15,6 @@ end comparador16;
 
 architecture rtl of comparador16 is
 begin
-
 	zr <=  not(	a	(	0	)	or
 	a	(	1	)	or
 	a	(	2	)	or

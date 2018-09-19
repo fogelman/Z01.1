@@ -66,10 +66,10 @@ architecture  rtl OF alu IS
 	end component;
 
 	component And16 is
-		port (
-			a:   in  STD_LOGIC_VECTOR(15 downto 0);
-			b:   in  STD_LOGIC_VECTOR(15 downto 0);
-			q:   out STD_LOGIC_VECTOR(15 downto 0)
+		port(
+			a   :  in STD_LOGIC_VECTOR(15 downto 0);
+			b   :  in STD_LOGIC_VECTOR(15 downto 0);
+			q   : out STD_LOGIC_VECTOR(15 downto 0)
 		);
 	end component;
 
@@ -93,5 +93,14 @@ architecture  rtl OF alu IS
    SIGNAL zxout,zyout,nxout,nyout,andout,adderout,muxout,precomp: std_logic_vector(15 downto 0);
 
 begin
-
+	compZX : zerador16 port map (zx,x,zxout);
+	compZY : zerador16 port map (zy,y,zyout);
+	compNX : inversor16 port map (nx,zxout,nxout);
+	compNY : inversor16 port map (ny,zyout,nyout);
+	compAND : And16 port map (nxout,nyout,andout);
+	compADD: Add16 port map(nxout,nyout,adderout);
+	compMUX: Mux16 port map(andout,adderout,f,muxout);
+	compINV: inversor16 port map(no,muxout,precomp);
+	compCOMP: comparador16 port map(precomp,zr,ng);
+saida <= precomp;
 end architecture;
