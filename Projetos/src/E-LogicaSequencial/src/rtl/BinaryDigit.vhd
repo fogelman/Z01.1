@@ -14,7 +14,7 @@ entity BinaryDigit is
 	);
 end entity;
 
-architecture architecture of BinaryDigit is
+architecture rtl of BinaryDigit is
 
   component Mux2Way is
     port(
@@ -35,10 +35,11 @@ architecture architecture of BinaryDigit is
     );
   end component;
 
-signal tmp1,tmp2
+signal tmp1,tmp2 : std_logic;
 
 begin
+
   mux2: Mux2Way PORT MAP (tmp2,input,load,tmp1);
   FF: FlipFlopD PORT MAP (clock,tmp1,'0','0',tmp2);
-  output <= tmp2
-end architecture;
+  output <= tmp2;
+end rtl;
