@@ -28,7 +28,7 @@ architecture rtl of Ram8 is
   end component;
 
   --Chamando o componente Mux8Way
-  component Mux8Way is
+  component Mux8Way16 is
     port(
     a,b,c,d,e,f,g,h : in STD_LOGIC_VECTOR(15 downto 0);
     sel: in STD_LOGIC_VECTOR(2 downto 0);
@@ -49,7 +49,7 @@ architecture rtl of Ram8 is
   signal r0,r1,r2,r3,r4,r5,r6,r7: STD_LOGIC; --Sinal do DMux8Way
 
 begin
-  k0 : Mux8Way portmap(
+  k0 : Mux8Way16 port map(
     a => s0,
     b => s1,
     c => s2,
@@ -59,10 +59,10 @@ begin
     g => s6,
     h => s7,
     sel => address,
-    q => out
+    q => output
   );
 
-  k1: DMux8Way portmap(
+  k1: DMux8Way port map(
     a => load,
     sel => address,
     q0 => r0,
@@ -129,6 +129,6 @@ begin
 		input => input,
 		load => r7,
 		output => s7
-  );
+    );
 
 end rtl;
