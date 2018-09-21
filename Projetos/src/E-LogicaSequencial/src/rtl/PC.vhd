@@ -38,7 +38,7 @@ begin
   process(clock,increment,load,reset)
   	begin
   		if (clock'event and clock='1') then
-        if expression then
+        if (reset = '1') then
           T <= '0000000000000000';
         elsif (load = '1') then
           T <= input;

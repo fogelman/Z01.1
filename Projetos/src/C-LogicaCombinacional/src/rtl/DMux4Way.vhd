@@ -12,7 +12,7 @@ entity DMux4Way is
 end entity;
 architecture rtl of DMux4Way is
 begin
-	process (a,q0,q1,q2,q3,sel) is
+	process (a,sel) is
 	begin
 		if (sel="00") then q0 <= a ; else q0 <= '0';
 		end if;
@@ -24,3 +24,4 @@ begin
 		end if;
 	end process;
 end rtl;
+
