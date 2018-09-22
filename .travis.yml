@@ -46,4 +46,5 @@ script:
   - python Projetos/src/C-LogicaCombinacional/testeLogicaCombinacional.py
   - python Projetos/src/D-UnidadeLogicaAritmetica/testeULA.py
   - python Projetos/src/E-LogicaSequencial/testeLogicaSequencial.py
+  - python Projetos/src/F-Assembly/testeAssembly.py
   
