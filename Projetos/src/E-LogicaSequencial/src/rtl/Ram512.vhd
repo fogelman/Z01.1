@@ -63,7 +63,7 @@ architecture rtl of Ram512 is
 
 begin
 
-	dmux : DMux8Way port map('1', address(8 downto 6),s(0),s(1),s(2),s(3),s(4),s(5),s(6),s(7));
+	dmux : DMux8Way port map(load, address(8 downto 6),s(0),s(1),s(2),s(3),s(4),s(5),s(6),s(7));
 	a : Ram64 port map (clock, input, s(0), address(5 downto 0), outA);
 	b : Ram64 port map (clock, input, s(1), address(5 downto 0), outB);
 	c : Ram64 port map (clock, input, s(2), address(5 downto 0), outC);

@@ -18,6 +18,7 @@ end entity;
 architecture arch of FlipFlopD is
 begin
 	process(clock, clear, preset)
+	begin
 		if (rising_edge(clock)) then
 			if (clear = '1') then
 				q <= '0';
