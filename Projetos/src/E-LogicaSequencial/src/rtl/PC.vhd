@@ -32,22 +32,30 @@ component Inc16 is
 	q   : out STD_LOGIC_VECTOR(15 downto 0));
 end component;
 
-signal T: STD_LOGIC_VECTOR(15 downto 0) := (OTHERS => '0');
+signal Tin: STD_LOGIC_VECTOR(15 downto 0) := (OTHERS => '0');
+signal Tinc: STD_LOGIC_VECTOR(15 downto 0) := (OTHERS => '0');
+signal Tout: STD_LOGIC_VECTOR(15 downto 0) := (OTHERS => '0');
 
 begin
-  process(clock,increment,load,reset)
-  	begin
-  		if (clock'event and clock='1') then
-        if (reset = '1') then
-          T <= '0000000000000000';
-        elsif (load = '1') then
-          T <= input;
-        elsif (increment = '1') then
-          INC1: Inc16 port map(T,T);
-        else
-          T <= T;
-        end if;
-      end if;
+
+    INC1: Inc16 port map(Tout,Tinc);
+
+	Tin <= Tinc when increment = '1' else
+	       Tout;
+
+  process(clock)
+  begin
+  	if (clock'event and clock='1') then
+		if (reset = '1') then
+		  Tout <= "0000000000000000";
+		elsif (load = '1') then
+		  Tout <= input;
+		else
+		  Tout <= Tin;
+		end if;
+    end if;
   end process;
-    output <= T;
+
+  output <= Tout;
+
 end arch;
