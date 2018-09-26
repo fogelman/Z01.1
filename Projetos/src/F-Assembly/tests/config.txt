@@ -12,3 +12,6 @@ abs 2 1000
 #factorial 2 10000
 #pow 2 10000
 mult 1 10000
+letra 1 10000
+linha 1 10000
+quadrado 1 10000
