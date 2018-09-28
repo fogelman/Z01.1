@@ -20,6 +20,7 @@ python:
   - '3.5'
 # command to install dependencies
 install:
+  - git submodule foreach 'git stash; git checkout master; git pull'
   - pip install -r requirements.txt
   
 before_script:
@@ -46,4 +47,5 @@ script:
   - python Projetos/src/C-LogicaCombinacional/testeLogicaCombinacional.py
   - python Projetos/src/D-UnidadeLogicaAritmetica/testeULA.py
   - python Projetos/src/E-LogicaSequencial/testeLogicaSequencial.py
+  - python Projetos/src/F-Assembly/testeAssembly.py
   
