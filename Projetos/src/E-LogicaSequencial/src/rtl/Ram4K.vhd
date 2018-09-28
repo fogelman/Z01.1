@@ -69,7 +69,7 @@ end component;
 
 begin
 
-dmux : DMux8Way port map('1', address(11 downto 9),s(0),s(1),s(2),s(3),s(4),s(5),s(6),s(7));
+dmux : DMux8Way port map(load, address(11 downto 9),s(0),s(1),s(2),s(3),s(4),s(5),s(6),s(7));
 a : Ram512 port map (clock, input, s(0), address(8 downto 0), outA);
 b : Ram512 port map (clock, input, s(1), address(8 downto 0), outB);
 c : Ram512 port map (clock, input, s(2), address(8 downto 0), outC);
