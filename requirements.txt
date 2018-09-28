@@ -3,3 +3,4 @@ vunit
 vunit_hdl
 requests
 python-firebase
+PyQt5
