@@ -1,0 +1,21 @@
+
+
+/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd
+
+Sep 08 09AM:41:15>: File /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd does not exist.
+Do you want to create the file?
+
+/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd
+
+Sep 08 09AM:41:19>: File /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd does not exist.
+Do you want to create the file?
+
+/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd
+
+Sep 08 09AM:41:28>: File /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd does not exist.
+Do you want to create the file?
+
+/home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd
+
+Sep 08 09AM:41:34>: File /home/corsi/Dropbox/Insper/3s-ElementoDeSistemas/5-Repositorios/Z01.1-priv/Projetos/src/G-Computador/src/rtl/Dispositivos/ROM/ROM32K.vhd does not exist.
+Do you want to create the file?

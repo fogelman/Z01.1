@@ -1,0 +1,147 @@
+Flow report for DE0_CV_Default
+Wed Oct 10 13:09:02 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Oct 10 13:08:34 2018           ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
+; Revision Name                   ; DE0_CV_Default                                  ;
+; Top-level Entity Name           ; Computador                                      ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CEBA4F23C7                                     ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 643 / 18,480 ( 3 % )                            ;
+; Total registers                 ; 565                                             ;
+; Total pins                      ; 44 / 224 ( 20 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 679,954 / 3,153,920 ( 22 % )                    ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 1 / 4 ( 25 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/10/2018 13:05:01 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; DE0_CV_Default      ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                        ;
++----------------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
+; Assignment Name                              ; Value                                  ; Default Value                        ; Entity Name ; Section Id ;
++----------------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP          ; On                                     ; Off                                  ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                        ; 137098623015374.153918750109461        ; --                                   ; --          ; --         ;
+; FITTER_EFFORT                                ; Standard Fit                           ; Auto Fit                             ; --          ; --         ;
+; FLOW_ENABLE_RTL_VIEWER                       ; On                                     ; Off                                  ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                       ; 85                                     ; --                                   ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                       ; 0                                      ; --                                   ; --          ; --         ;
+; MISC_FILE                                    ; ../src/rtl/Dispositivos/PLL/PLL.cmp    ; --                                   ; --          ; --         ;
+; OPTIMIZATION_TECHNIQUE                       ; Speed                                  ; Balanced                             ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS               ; Half Signal Swing                      ; --                                   ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS               ; Half Signal Swing                      ; --                                   ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS              ; Half Vccio                             ; --                                   ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS              ; Half Vccio                             ; --                                   ; --          ; --         ;
+; PARTITION_COLOR                              ; -- (Not supported for targeted family) ; --                                   ; Computador  ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL          ; -- (Not supported for targeted family) ; --                                   ; Computador  ; Top        ;
+; PARTITION_NETLIST_TYPE                       ; -- (Not supported for targeted family) ; --                                   ; Computador  ; Top        ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC               ; On                                     ; Off                                  ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION      ; On                                     ; Off                                  ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING         ; On                                     ; Off                                  ; --          ; --         ;
+; POWER_BOARD_THERMAL_MODEL                    ; None (CONSERVATIVE)                    ; --                                   ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION                ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                                   ; --          ; --         ;
+; PROJECT_IP_REGENERATION_POLICY               ; ALWAYS_REGENERATE_IP                   ; SKIP_REGENERATING_IP_IF_HDL_MODIFIED ; --          ; --         ;
+; QII_AUTO_PACKED_REGISTERS                    ; Normal                                 ; Auto                                 ; --          ; --         ;
+; ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ; On                                     ; Auto                                 ; --          ; --         ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL             ; MAXIMUM                                ; Normal                               ; --          ; --         ;
+; SMART_RECOMPILE                              ; On                                     ; Off                                  ; --          ; --         ;
+; STATE_MACHINE_PROCESSING                     ; One-Hot                                ; Auto                                 ; --          ; --         ;
+; SYNTHESIS_ONLY_QIP                           ; On                                     ; --                                   ; --          ; --         ;
+; TOP_LEVEL_ENTITY                             ; Computador                             ; DE0_CV_Default                       ; --          ; --         ;
++----------------------------------------------+----------------------------------------+--------------------------------------+-------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:01:04     ; 1.0                     ; 1088 MB             ; 00:01:53                           ;
+; Fitter                    ; 00:02:07     ; 1.1                     ; 1907 MB             ; 00:03:24                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 944 MB              ; 00:00:11                           ;
+; TimeQuest Timing Analyzer ; 00:00:27     ; 1.2                     ; 1175 MB             ; 00:00:32                           ;
+; Total                     ; 00:03:49     ; --                      ; --                  ; 00:06:00                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                               ;
++---------------------------+------------------+---------------+---------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version    ; Processor type ;
++---------------------------+------------------+---------------+---------------+----------------+
+; Analysis & Synthesis      ; corsi-arch       ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; Fitter                    ; corsi-arch       ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; Assembler                 ; corsi-arch       ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; TimeQuest Timing Analyzer ; corsi-arch       ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
++---------------------------+------------------+---------------+---------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
+quartus_fit --read_settings_files=off --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
+quartus_asm --read_settings_files=off --write_settings_files=off DE0_CV_Default -c DE0_CV_Default
+quartus_sta DE0_CV_Default -c DE0_CV_Default
+
+
+
