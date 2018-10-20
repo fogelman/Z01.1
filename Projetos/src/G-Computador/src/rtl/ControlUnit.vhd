@@ -49,4 +49,5 @@ ny <= instruction(9);
 f <= instruction(8);
 no <= instruction(7);
 loadPC <= (instruction(17) and ((instruction(0) and (not ng) and (not zr)) or (instruction(1) and zr and (not ng)) or (instruction(2) and (not zr) and ng))); 
+
 end architecture;
