@@ -35,7 +35,6 @@ public class SymbolTable {
     	Table.put("R13", 13);
     	Table.put("R14", 14);
     	Table.put("R15", 15);
-//    	Simbolos Especiais
     	Table.put("SP", 0);
     	Table.put("LCL", 1);
     	Table.put("ARG", 2);
