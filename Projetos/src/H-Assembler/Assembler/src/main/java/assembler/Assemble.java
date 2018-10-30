@@ -45,7 +45,33 @@ public class Assemble {
      * Dependencia : Parser, SymbolTable
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
+	linhaTemp = 0;
+	Parser parsLabel = new Parser(inputFile);
+	while (parsLabel.advance()){
+		if (parsLabel.commandType(parsLabel.command()) == L_COMMAND){
+			String label = parsLabel.label(parsLabel.command());
+			if (!table.contains(label)){
+				table.addEntry(label, linha);
+            }
+        }
+		else{
+			linha += 1;
+	    }
     }
+    ramTemp = 16;
+    Parser parsSymbol = new Parser(inputFile);
+    while (parsSymbol.advance()){
+        if (parsSymbol.commandType(parsSymbol.command()) == A_COMMAND){
+            String symbol = parsSymbol.symbol(parsSymbol.command());
+            if (!(symbol.charAt(0)>47 && symbol.charAt(0)<58)){ //if not number
+                if (!table.contains(symbol)){
+                    table.addEntry(symbol, ramTemp);
+                    ramTemp += 1;
+                }
+            }
+        }
+    }
+}
 
     /**
      * Segundo passo para a geração do código de máquina
@@ -54,9 +80,20 @@ public class Assemble {
      *
      * Dependencias : Parser, Code
      */
+	
+
     public void generateMachineCode() throws FileNotFoundException, IOException{
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
-
+        while(parser.advance() == true) {
+        	if(parser.command().equals("A_COMMAND")) {
+        		Code.toBinary(parser.symbol(parser.command()));
+        	}
+        	else if(parser.command().equals("C_COMMAND")) {
+        		Code.comp(parser.instruction(parser.command()));
+        	}
+        	
+        	
+        }
     }
 
     /**
