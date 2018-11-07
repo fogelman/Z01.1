@@ -57,7 +57,7 @@ def genJAR():
     args = vars(ap.parse_args())
 
     print("==== gerando jar ====================================")
-    os.system("mvn -f {} package -q -e".format(pwd))
+    os.system("mvn -f {} package -q -e -DskipTests".format(pwd))
 
     if checkUnitTests(os.path.join(pwd,'target', 'surefire-reports'+'/')):
             print("==== ERRO ======================================")
