@@ -92,15 +92,17 @@ architecture arch of CPU is
   signal c_ng         : std_logic := '0';
 
   -- Sinais de dados
-  signal s_muxALUI_Aout   : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_muxAM_out      : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_muxAMD_ALUout  : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_muxSDout       : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_regAout        : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_regDout        : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_regSout        : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_ALUout         : STD_LOGIC_VECTOR(15 downto 0);
-  signal s_pcout          : STD_LOGIC_VECTOR(15 downto 0);
+  signal s_muxALUI_Aout   : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_muxAM_out      : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_muxAMD_ALUout  : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_muxSDout       : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_regAout        : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_regDout        : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_regSout        : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_ALUout         : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+  signal s_pcout          : STD_LOGIC_VECTOR(15 downto 0):=(others=>'0');
+
+  signal instruction_slice          : STD_LOGIC_VECTOR(17 downto 0):=(others=>'0');
 
 begin
   muxALUI_port: Mux16 PORT MAP(
@@ -195,8 +197,7 @@ begin
               loadM => writeM,
               loadPC => c_loadPC
               );
-
-
+              
             addressM <= s_regAout(14 downto 0);
             pcout <= s_pcout(14 downto 0);
   outM <= s_ALUout;
