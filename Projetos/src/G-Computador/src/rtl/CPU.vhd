@@ -107,7 +107,7 @@ architecture arch of CPU is
 begin
   muxALUI_port: Mux16 PORT MAP(
               a => s_ALUout,
-              b => instruction,
+              b => instruction(15 downto 0),
               sel => c_muxALUI_A,
               q => s_muxALUI_Aout
               );
@@ -197,7 +197,7 @@ begin
               loadM => writeM,
               loadPC => c_loadPC
               );
-              
+
             addressM <= s_regAout(14 downto 0);
             pcout <= s_pcout(14 downto 0);
   outM <= s_ALUout;
