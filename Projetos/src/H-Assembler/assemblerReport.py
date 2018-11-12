@@ -25,28 +25,32 @@ def assemblerReport(logFile, send):
     print("==== Results ============================")
     r = report('', 'H')
 
+    print(logFile)
     if logFile is None:
         if r.assembler(pwd+'logJCode.txt'):
             print("==== ERRO ======================================")
-            print('=> Erro Teste Java, analise log do maven! ')
+            print('=> Erro Teste Java, analise log do maven!   ')
+            print('=> Code ')
             print("================================================")
             sys.exit(-1)
 
         if r.assembler(pwd+'logJParser.txt'):
             print("==== ERRO ======================================")
-            print('=> Erro Teste Java, analise log do maven! ')
+            print('=> Erro Teste Java, analise log do maven! 2')
+            print('=> Parser ')
             print("================================================")
             sys.exit(-1)
 
         if r.assembler(pwd+'logJSymbolTable.txt'):
             print("==== Testando ==================================")
-            print('=> Erro Teste Java, analise log do maven! ')
+            print('=> Erro Teste Java, analise log do maven! 3')
+            print('=> Symbol Table ')
             print("================================================")
             sys.exit(-1)
     else:
         if r.assembler(pwd+logFile):
             print("==== ERRO ======================================")
-            print('=> Erro Teste Java, analise log do maven! ')
+            print('=> Erro Teste Java, analise log do maven! 4')
             print("================================================")
             sys.exit(-1)
 

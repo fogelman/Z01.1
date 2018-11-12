@@ -11,7 +11,10 @@ import org.junit.AfterClass;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Rule;
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.concurrent.TimeUnit;
 
@@ -37,18 +40,23 @@ public class CodeTest  {
         PrintWriter logFile = new PrintWriter(logFileName, "UTF-8");
         logFile.write(builder.toString());
         logFile.close();
+        try {
+            Runtime rt = Runtime.getRuntime();
+            Process proc = rt.exec("../assemblerReport.py -f" + logFileName);
 
-        try
-            {
-                Runtime rt = Runtime.getRuntime();
-                Process proc = rt.exec("../assemblerReport.py -f" + logFileName);
-                if(!proc.waitFor(15,  TimeUnit.SECONDS)){
-                    proc.destroy();
-                }
-            } catch (Throwable t)
-            {
-                t.printStackTrace();
+            BufferedReader input = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+            if(!proc.waitFor(15,  TimeUnit.SECONDS)){
+                proc.destroy();
+            } else {
+                String line;
+                while ((line = input.readLine()) != null) {
+                  System.out.println(line);
+               }
             }
+        } catch (Throwable t)
+        {
+               t.printStackTrace();
+        }
     }
 
     @Rule

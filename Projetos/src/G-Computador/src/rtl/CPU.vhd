@@ -106,10 +106,8 @@ architecture arch of CPU is
 
 begin
 
-  muxALUI_port: Mux16 PORT MAP(s_ALUout,
-    instruction_slice(15 downto 0),
-    c_muxALUI_A, 
-    s_muxALUI_Aout);
+  muxALUI_port: Mux16 PORT MAP(s_ALUout, instruction, c_muxALUI_A, s_muxALUI_Aout);
+
   muxAM_port: Mux16 PORT MAP(s_regAout, inM, c_muxA, s_muxAM_out);
   muxAMD_ALU_port: Mux16 PORT MAP(s_regDout, s_muxAM_out, c_muxAMD_ALU, s_muxAMD_ALUout);
   muxSD_ALU_port: Mux16 PORT MAP(s_regSout, s_regDout, c_muxSD_ALU, s_muxSDout);
@@ -118,10 +116,12 @@ begin
   RgD: Register16 PORT MAP (clock, s_ALUout, c_loadD, s_regDout);
   ALU_port: ALU PORT MAP(s_muxSDout, s_muxAMD_ALUout, c_zx, c_nx, c_zy, c_ny, c_f, c_no, c_zr, c_ng, s_ALUout);
   PC_port: PC PORT MAP(clock, '1', c_loadPC, reset, s_regDout, s_pcout);
-  CU: ControlUnit PORT MAP (instruction, c_zr, c_ng, c_muxALUI_A, c_muxA, c_muxSD_ALU, c_zx, c_nx, c_zy, c_ny, c_f, c_no, c_loadA, c_loadD, c_loadS, writeM, c_loadPC);
+
+  CU: ControlUnit PORT MAP (instruction, c_zr, c_ng, c_muxALUI_A, c_muxAM_ALU, c_muxSD_ALU, c_zx, c_nx, c_zy, c_ny, c_f, c_no, c_loadA, c_loadD, c_loadS, writeM, c_loadPC)
+
 
   outM <= s_ALUout;
   addressM <= s_regAout(14 downto 0);
   pcout <= s_pcout(14 downto 0);
-  instruction_slice <= instruction;
 end architecture;
+
