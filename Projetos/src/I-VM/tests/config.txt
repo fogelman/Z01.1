@@ -27,11 +27,12 @@ SimpleAdd 1 200
 # Entrega
 # /src/vmExamples
 # call, funcoes, goto,
-# label   
+# label
 #--------------------
 
 1a-Add 1 500
 1b-Add 1 500
+1c-Div 1 4000
 2a-Calculadora 1 500
 2b-Calculadora 1 5000
 2c-Calculadora 1 4000

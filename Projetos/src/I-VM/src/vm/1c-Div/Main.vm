@@ -13,27 +13,8 @@
 
 function Main.main 0
 push constant 15
-pop local 0
 push constant 5
-pop local 1
-push constant 0
-pop local 3
-label loop
-push constant 1
-push local 0
-gt
-if-goto end
-push local 0
-push local 1
-sub
-pop local 0
-push local 3
-push constant 1
-add
-pop local 3
-goto loop
-label end
-push local 3
+call div 2
 pop temp 0
 
 // esse loop sempre deve existir!
