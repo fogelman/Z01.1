@@ -1,0 +1,25 @@
+// A
+// B
+//    <- SP 
+function div 2     // A/B
+  push constant 0  // x = 0
+  pop local 0      //
+  push argument 0  // y = A
+  pop local 1      // 
+label loop         //
+  push local 1     // 
+  push argument 1  //
+  lt               //
+  if-goto end      // if y > B {
+  push local 0     // x = x + 1
+  push constant 1  //
+  add              // 
+  pop local 0      // 
+  push local 1     // y = y - B
+  push argument 1  //
+  sub              // 
+  pop local 1      // 
+  goto loop        //
+label end          //
+  push local 0     // return x
+  return           // 

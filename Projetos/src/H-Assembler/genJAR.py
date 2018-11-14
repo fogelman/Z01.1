@@ -24,11 +24,12 @@ from assemblerReport import assemblerReport
 def checkUnitTests(dirname):
 
         hasErrors = False
+        filename = 'None'
 
         # rotina de leitura do arquivo de teste
-        for filename in os.listdir(dirname):
-            if filename.endswith('.txt'):
-                try:
+        try:
+            for filename in os.listdir(dirname):
+                if filename.endswith('.txt'):
                     with open(dirname+filename, 'r') as f:
                             tmp = f.read().splitlines()
                             partes = tmp[3].split()
@@ -42,10 +43,10 @@ def checkUnitTests(dirname):
                                     if(partes[i]=='Skipped:'):
                                             if(partes[i+1]!='0,'):
                                                     hasErrors = True
-                    return hasErrors
-                except IOError:
-                    print('Error : Arquivo não encontrado: {}'.format(filename))
-                    return(1)
+            return hasErrors
+        except IOError:
+            print('Error : Arquivo não encontrado: {}'.format(filename))
+            return(1)
         return(0)
 
 def genJAR():
@@ -64,7 +65,6 @@ def genJAR():
             print("================================================")
             sys.exit(-1)
 
-    assemblerReport(pwd, False)
     sys.exit(0)
 
 if __name__ == "__main__":
