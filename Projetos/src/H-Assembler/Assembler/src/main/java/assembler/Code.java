@@ -126,84 +126,153 @@ public class Code {
      * @return Opcode (String de 7 bits) com código em linguagem de máquina para a instrução.
      */
     public static String comp(String[] mnemnonic) {
-    	char[] binAB = {'0','0'};
-
+    	String binAB = "000";
         // A e B
+    	 
         if (mnemnonic.length > 2){
-          if (mnemnonic[1] == "(%A)" || mnemnonic[2] == "(%A)") binAB[0] = '1';
-          if (mnemnonic[1] == "%S" || mnemnonic[2] == "%S") binAB[1] = '1';
+          if ((mnemnonic[1].equals("%S") && mnemnonic[2].equals("%A"))|| 
+        		  (mnemnonic[1].equals("%A") && mnemnonic[2].equals("%S")))  
+        	  binAB = "001";
+        	  //binAB[1] = "0";
+        	  //binAB[2] = "1";
+          
+        	  
+          if ((mnemnonic[1].equals("%S") && mnemnonic[2].equals("(%A)"))||
+        		  (mnemnonic[1].equals("(%A)") && mnemnonic[2].equals("%S"))) 
+        	  binAB = "011";
+        	  //binAB[1] = "1";
+        	  //binAB[2] = "1";                            
+          
+        		                                                                    
+          if ((mnemnonic[1].equals("%S") && mnemnonic[2].equals("%D"))|| 
+        		  (mnemnonic[1].equals("%D") && mnemnonic[2].equals("%S"))) 
+        	  binAB = "100";
+        	  //binAB[1] = "0";
+        	  //binAB[2] = "0";
+          
+          if ((mnemnonic[1].equals("%D") && mnemnonic[2].equals("(%A)"))||
+        		  (mnemnonic[1].equals("(%A)") && mnemnonic[2].equals("%D"))) 
+        	  binAB = "010";
+        	  //binAB[1] = "1";
+        	  //binAB[2] = "0"; 
+          if (mnemnonic[2].equals("$0") || mnemnonic[2].equals("$1")) {
+        	  if (mnemnonic[1].equals("(%A)")) binAB = "010";
+        	  if (mnemnonic[1].equals("%S")) binAB = "001";  
+          }
+
         }
         else if (mnemnonic.length == 2){
-          if (mnemnonic[1] == "(%A)") binAB[0] = '1';
-          if (mnemnonic[1] == "%S") binAB[1] = '1';
+          if (mnemnonic[1].equals("(%A)")) binAB = "010";
+          if (mnemnonic[1].equals("%S")) binAB = "001";
         }
 
         // Or
-        if (mnemnonic[0] == "orw"){
+        if (mnemnonic[0].equals("orw")){
           String out = String.valueOf(binAB);
           return out+"010101";
         }
 
         // Add
-        if (mnemnonic[0] == "addw"){
+        if (mnemnonic[0].equals("addw")){
           String out = String.valueOf(binAB);
           return out+"000010";
         }
 
         // And
-        if (mnemnonic[0] == "andw"){
+        if (mnemnonic[0].equals("andw")){
           String out = String.valueOf(binAB);
           return out+"000000";
         }
 
         // Not
-        if (mnemnonic[0] == "notw"){
+        if (mnemnonic[0].equals("notw")){
           String out = String.valueOf(binAB);
           if (mnemnonic[1].contains("%A")) return out+"110001";
           else return out+"001101";
         }
 
         // Movw
-        if (mnemnonic[0] == "movw"){
+        if (mnemnonic[0].equals("movw")){
           String out = String.valueOf(binAB);
-          if (mnemnonic[2].contains("%A")) return out+"001100";
-          else return out+"110000";
+          if (mnemnonic[1].equals("%S")) {
+        	  out = "001";
+          }
+          if (mnemnonic[1].equals("(%A)")) {
+        	  out = "010";
+          }
+          if (mnemnonic[1].equals("%A")) {
+        	  out = "000";
+          }
+          if (mnemnonic[1].equals("%D")) {
+        	  out = "000";
+          }
+          if (mnemnonic[1].contains("%A") || mnemnonic[1].contains("(%A)")) return out+"110000";
+          else return out + "001100";
         }
 
         // Inc
-        if (mnemnonic[0] == "incw"){
+        if (mnemnonic[0].equals("incw")){
           String out = String.valueOf(binAB);
           if (mnemnonic[1].contains("%A"))return out+"110111";
           else return out+"011111";
         }
 
         // Dec
-        if (mnemnonic[0] == "decw"){
+        if (mnemnonic[0].equals("decw")){
           String out = String.valueOf(binAB);
           if (mnemnonic[1].contains("%A")) return out+"110010";
-          else return out+"000110";
+          if (mnemnonic[1].contains("(%A)")) return out+"110010";
+          else return out+"001110";
         }
 
         // Neg
-        if (mnemnonic[0] == "negw"){
+        if (mnemnonic[0].equals("negw")){
           String out = String.valueOf(binAB);
           if (mnemnonic[1].contains("%A")) return out+"110011";
           else return out+"001111";
         }
 
         // Sub
-        if (mnemnonic[0] == "subw"){
+        if (mnemnonic[0].equals("subw")){
           String out = String.valueOf(binAB);
-          return out+"010011";
+          if (mnemnonic[1].equals("%D") || mnemnonic[1].equals("%S")) {
+              if (( mnemnonic[2].equals("$1"))){
+            	  return out+"001110";
+              }
+              if ((mnemnonic[1].equals("%D") && mnemnonic[2].equals("%S"))) {
+            	  return out+"000111";
+              }
+        	  return out+"010011";
+          }
+          if (mnemnonic[1].equals("%A") || mnemnonic[1].equals("(%A)")) {
+              if (( mnemnonic[2].equals("$1"))){
+            	  return out+"110010";
+              }
+        	  return out+"000111";
+          }
+          if ((mnemnonic[1].equals("%S") && mnemnonic[2].equals("%D"))){
+        	  return out+"010011";
+          }
+
+    
+          
         }
 
         // rSub
-        if (mnemnonic[0] == "rsubw"){
+        if (mnemnonic[0].equals("rsubw")){
           String out = String.valueOf(binAB);
           return out+"000111";
         }
-
-        return null;
+        String out = String.valueOf(binAB);
+        if(mnemnonic[0].equals("jmp")) return out+"001100";
+		else if(mnemnonic[0].equals("je")) return out+"001100";
+		else if(mnemnonic[0].equals("jne")) return out+"001100";
+		else if(mnemnonic[0].equals("jg")) return out+"001100";
+		else if(mnemnonic[0].equals("jge")) return out+"001100";
+		else if(mnemnonic[0].equals("jl")) return out+"001100";
+		else if(mnemnonic[0].equals("jle")) return out+"001100";
+        
+        return "000000000";
     }
 
     /**
