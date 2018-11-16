@@ -41,6 +41,7 @@ before_script:
 # define o modelsim como simulador para o VUNIT
   - export VUNIT_SIMULATOR=modelsim
   - export VUNIT_MODELSIM_PATH=$HOME/modelsim_ase/bin/
+  - git submodule foreach 'git stash; git checkout master; git pull'
 
 script:
   - python Projetos/src/0-Infra/testeVHDL.py
