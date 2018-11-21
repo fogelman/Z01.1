@@ -18,18 +18,16 @@ TOOL_PATH = os.path.join(ROOT_PATH, 'Projetos', 'Z01-tools')
 TOOL_SCRIPT_PATH = os.path.join(TOOL_PATH, 'scripts')
 sys.path.insert(0,TOOL_SCRIPT_PATH)
 from report import report
-from assemblerReport import assemblerReport
 
 # Verificar se testes unitários passaram
 def checkUnitTests(dirname):
 
         hasErrors = False
-        filename = 'None'
 
         # rotina de leitura do arquivo de teste
-        try:
-            for filename in os.listdir(dirname):
-                if filename.endswith('.txt'):
+        for filename in os.listdir(dirname):
+            if filename.endswith('.txt'):
+                try:
                     with open(dirname+filename, 'r') as f:
                             tmp = f.read().splitlines()
                             partes = tmp[3].split()
@@ -43,21 +41,21 @@ def checkUnitTests(dirname):
                                     if(partes[i]=='Skipped:'):
                                             if(partes[i+1]!='0,'):
                                                     hasErrors = True
-            return hasErrors
-        except IOError:
-            print('Error : Arquivo não encontrado: {}'.format(filename))
-            return(1)
+                    return hasErrors
+                except IOError:
+                    print('Error : Arquivo não encontrado: {}'.format(filename))
+                    return(1)
         return(0)
 
 def genJAR():
-    pwd = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'Assembler/')
+    pwd = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'VMtranslator/')
 
     ap = argparse.ArgumentParser()
     ap.add_argument("-f", "--logFile", help="log file a ser enviado")
     args = vars(ap.parse_args())
 
     print("==== gerando jar ====================================")
-    os.system("mvn -f {} package -q -e -DskipTests".format(pwd))
+    os.system("mvn -f {} package -q -e".format(pwd))
 
     if checkUnitTests(os.path.join(pwd,'target', 'surefire-reports'+'/')):
             print("==== ERRO ======================================")
