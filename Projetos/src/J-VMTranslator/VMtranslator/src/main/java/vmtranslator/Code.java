@@ -188,6 +188,14 @@ public class Code {
 
         List<String> commands = new ArrayList<String>();
         commands.add( "; Label (marcador)" );
+        commands.add(labelTransform(label, filename));
+        
+        
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
+        
+        
 
     }
 
@@ -273,6 +281,12 @@ public class Code {
     // fecha o arquivo de escrita
     public void close() throws IOException {
         this.outputFile.close();
+    }
+    
+    
+    private String labelTransform(String label, String fileName ) {
+    	 return ("$"+label+"."+filename);
+    	
     }
 
 }
