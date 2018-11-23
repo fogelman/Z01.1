@@ -195,8 +195,6 @@ public class Code {
         commands.toArray( stringArray );
         write(stringArray);
         
-        
-
     }
 
     /**
@@ -207,8 +205,11 @@ public class Code {
     public void writeGoto(String label) {
 
         List<String> commands = new ArrayList<String>();
-        commands.add(String.format("; %d - Goto Incondicional", lineCode++));
+        commands.add("goto " + labelTransform(label, filename));
 
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
     }
 
     /**
@@ -219,8 +220,11 @@ public class Code {
     public void writeIf(String label) {
 
         List<String> commands = new ArrayList<String>();
-        commands.add(String.format("; %d - Goto Condicional", lineCode++));
+        commands.add("if-goto " + labelTransform(label, filename));
 
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
      }
 
     /**
