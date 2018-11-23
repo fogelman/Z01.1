@@ -49,4 +49,5 @@ script:
   - python Projetos/src/D-UnidadeLogicaAritmetica/testeULA.py
   - python Projetos/src/E-LogicaSequencial/testeLogicaSequencial.py
   - python Projetos/src/F-Assembly/testeAssembly.py
+  - python Projetos/src/J-VMTranslator/testeVmMyTranslator.py
   
