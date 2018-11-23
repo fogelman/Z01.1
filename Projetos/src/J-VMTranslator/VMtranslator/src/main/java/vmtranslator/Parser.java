@@ -10,6 +10,8 @@
 package vmtranslator;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Encapsula o código de leitura. Carrega as instruções na linguagem de máquina virtual a pilha,
@@ -19,8 +21,9 @@ import java.io.*;
 public class Parser {
 
     public String currentCommand = "";  // comando atual
+    private String[] arithmetic = {"add","sub","neg","eq","gt","lt","and","or", "not"};
     private BufferedReader fileReader;  // leitor de arquivo
-
+    private Scanner scanner;
     /** Enumerator para os tipos de comandos de Linguagem de Máquina Virtua a Pilha. */
     public static enum CommandType {
         C_ARITHMETIC,      // comandos aritméticos
@@ -39,7 +42,9 @@ public class Parser {
      * @param file arquivo VM que será feito o parser.
      */
     public Parser(String file) throws FileNotFoundException {
-        this.fileReader = new BufferedReader(new FileReader(file));
+//        this.fileReader = new BufferedReader(new FileReader(file));
+        FileInputStream fis = new FileInputStream(file);
+        scanner = new Scanner(fis);
     }
 
     /**
@@ -48,9 +53,21 @@ public class Parser {
      * entrada o método retorna "Falso", senão retorna "Verdadeiro".
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
-    public Boolean advance() throws IOException {
-    }
-
+    public Boolean advance() {
+    	
+    		while(scanner.hasNextLine()) {
+    			currentCommand = scanner.nextLine();
+    			String[] instruction = currentCommand.split("//");
+    			currentCommand = instruction[0];
+    			currentCommand = currentCommand.trim();
+    			System.out.println(currentCommand);
+    			if(currentCommand.length()>0 && instruction[0] !="//") {
+    				return true;
+    			}    			
+    		}
+    		scanner.close();
+    		return false;
+    	}
     /**
      * Retorna o comando "intrução" atual (sem o avanço)
      * @return a instrução atual para ser analilisada
@@ -67,6 +84,38 @@ public class Parser {
      * @return o tipo da instrução.
      */
     public CommandType commandType(String command) {
+    	String[] instruction = command.split(" ");
+    	if (instruction[0].equals("push")) {
+    		return CommandType.C_PUSH;
+    	}
+    	else if (instruction[0].equals("pop")) {
+    		return CommandType.C_POP;
+    	}
+    	else if (instruction[0].equals("label")) {
+    		return CommandType.C_LABEL;
+    	}
+    	else if (instruction[0].equals("goto")) {
+    		return CommandType.C_GOTO;
+    	}
+    	else if (instruction[0].equals("if-goto")) {
+    		return CommandType.C_IF;
+    	}
+    	else if (instruction[0].equals("function")) {
+    		return CommandType.C_FUNCTION;
+    	}
+    	else if (instruction[0].equals("return")) {
+    		return CommandType.C_RETURN;
+    	}
+    	else if(instruction[0].equals("call")) {
+    		return CommandType.C_CALL;
+    	}
+    	else if (Arrays.stream(arithmetic).anyMatch(instruction[0]::equals)){
+    		return CommandType.C_ARITHMETIC;
+    	}
+    	else {
+    		return null;
+    	}
+
     }
 
 
@@ -78,6 +127,23 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String arg1(String command) {
+    	String[] instruction = command.split(" ");
+    	if (Arrays.stream(arithmetic).anyMatch(instruction[0]::equals)) {
+    		return instruction[0];
+    	}
+    	else {
+    		
+    		if (instruction.length > 0) {
+    			return instruction[1];
+    		}
+    		else {
+    			return null;
+    		}
+    		
+    		
+    	}
+    	
+    	
     }
 
     /**
@@ -87,7 +153,18 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public Integer arg2(String command) {
-    }
+    	String[] instruction = command.split(" ");
+    		
+    		if (instruction.length > 1) {
+    			return 	Integer.parseInt(instruction[2]);
+    		}
+    		else {
+    			return null;
+    		}
+    		
+    		
+    	}
+    
 
     // fecha o arquivo de leitura
     public void close() throws IOException {
