@@ -94,47 +94,319 @@ public class Code {
 
         if(command == Parser.CommandType.C_POP) {
             commands.add(String.format("; %d - POP %s %d", lineCode++ ,segment, index));
-
+            
             if (segment.equals("constant")) {
                 Error.error("Não faz sentido POP com constant");
             } else if (segment.equals("local")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $1, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("argument")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $2, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("this")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $3, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("that")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $4, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("static")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $5, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("temp")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $10, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("pointer")) {
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
                 if(index==0) {
-
+                	 Error.error("Instrução invalida");
                 } else {
-
+                	
                 }
             }
         } else if (command == Parser.CommandType.C_PUSH) {
             commands.add(String.format("; %d - PUSH %s %d", lineCode++ ,segment, index));
 
             if (segment.equals("constant")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $250, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("local")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $1, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("argument")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $2, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("this")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $-1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $3, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("that")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $4, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("static")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $10, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("temp")) {
-
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $5, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
             } else if (segment.equals("pointer")) {
-                if(index==0) {
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a),%a");
+            	commands.add("subw %a, $1, %d");
+            	
+            	commands.add("movw (%d), %s");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw %d, (%a)");
+            	
+            	commands.add("leaw $0, %a");
+            	commands.add("movw (%a), %d");
+            	
+            	if(index>0) {
+            		commands.add("leaw $"+index + " %a");
+            		commands.add("addw %d, %a, %d");
+            	}
+            	
+            	commands.add("movw %s, (%d)");
+            	
+            	if(index==0) {
 
                 } else {
 
@@ -236,6 +508,10 @@ public class Code {
 
         List<String> commands = new ArrayList<String>();
         commands.add(String.format("; %d - chamada de funcao %s", lineCode++, functionName));
+        
+        String[] stringArray = new String[ commands.size() ];
+        commands.toArray( stringArray );
+        write(stringArray);
 
     }
 
