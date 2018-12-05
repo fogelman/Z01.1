@@ -282,7 +282,7 @@ public class Code {
      */
     public static String jump(String[] mnemnonic) {
        /** 
-        * Verifica se é JUMP
+        * Verifica se  JUMP
         */
    	if(mnemnonic.length > 2)return "000";
     /** 
