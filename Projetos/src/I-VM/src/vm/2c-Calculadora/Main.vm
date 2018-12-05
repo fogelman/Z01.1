@@ -4,7 +4,7 @@
 // ---------------------------------
 //
 // Projeto      : Projeto I-VM
-// File         : 2a-Calculadora
+// File         : 2c-Calculadora
 //
 // Descritivo   :
 //  Escreva um código em VM que realize a seguinte
@@ -13,14 +13,15 @@
 //
 //  O resultado deve ser salvo em temp 1
 //
-//  Voce deve implementar a funcao de divisao
-//  utilze como base o 1c-div
+//  Para isso, crie uma funcao div que realiza a divisao
+//  entre o primeiro e o segundo valor da pilha
+//
+//  Use a funcao de mult como exemplo
 //
 //  ****************************************************
 //  ** A ideia é deixar o Z01 resolver, você não deve **
 //  ** simplificar a equação                          **
 //  ****************************************************
-// ---------------------------------
 
 function Main.main 0
 push constant 15
@@ -28,8 +29,5 @@ push constant 5
 call div 2
 pop temp 1
 
-// esse loop sempre deve existir!
-// caso contrario o computador vai
-// executar lixo de memoria.
 label while
-  goto while
+    goto while
