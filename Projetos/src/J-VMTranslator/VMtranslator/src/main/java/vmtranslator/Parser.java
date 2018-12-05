@@ -53,21 +53,21 @@ public class Parser {
      * entrada o método retorna "Falso", senão retorna "Verdadeiro".
      * @return Verdadeiro se ainda há instruções, Falso se as instruções terminaram.
      */
-    public Boolean advance() {
-    	
-    		while(scanner.hasNextLine()) {
-    			currentCommand = scanner.nextLine();
-    			String[] instruction = currentCommand.split("//");
-    			currentCommand = instruction[0];
-    			currentCommand = currentCommand.trim();
-    			System.out.println(currentCommand);
-    			if(currentCommand.length()>0 && instruction[0] !="//") {
-    				return true;
-    			}    			
-    		}
-    		scanner.close();
-    		return false;
-    	}
+	public Boolean advance() {
+		while(scanner.hasNextLine()) {
+			currentCommand = scanner.nextLine();
+			String[] instruction = currentCommand.split("//");
+			if (instruction.length > 0) {
+				if (!instruction[0].isEmpty()) {
+					currentCommand = currentCommand.trim();
+					return true;
+				}
+			}
+		}
+		scanner.close();
+		return false;
+	}
+	
     /**
      * Retorna o comando "intrução" atual (sem o avanço)
      * @return a instrução atual para ser analilisada
