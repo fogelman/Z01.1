@@ -1,4 +1,4 @@
-// ---------------------------------  
+// ---------------------------------
 // Rafael Corsi @ insper . edu . br
 //              2018a
 // ---------------------------------
@@ -6,13 +6,16 @@
 // Projeto      : Projeto I-VM
 // File         : add1.vm
 //
-// Descritivo   : 
+// Descritivo   :
 //  Divide 15 / 5 e salva o resultado em temp 0
 //
 // ----------------------------------
 
 function Main.main 0
-
+push constant 15
+push constant 5
+call div 2
+pop temp 0
 
 // esse loop sempre deve existir!
 // caso contrario o computador vai
