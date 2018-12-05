@@ -67,7 +67,7 @@ public class Parser {
 		scanner.close();
 		return false;
 	}
-	
+
     /**
      * Retorna o comando "intrução" atual (sem o avanço)
      * @return a instrução atual para ser analilisada
@@ -168,7 +168,7 @@ public class Parser {
 
     // fecha o arquivo de leitura
     public void close() throws IOException {
-        fileReader.close();
+		scanner.close();
     }
 
 }
