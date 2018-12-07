@@ -83,16 +83,38 @@ public class Assemble {
 	
 
     public void generateMachineCode() throws FileNotFoundException, IOException{
-        Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
-        while(parser.advance() == true) {
-        	if(parser.command().equals("A_COMMAND")) {
-        		Code.toBinary(parser.symbol(parser.command()));
-        	}
-        	else if(parser.command().equals("C_COMMAND")) {
-        		Code.comp(parser.instruction(parser.command()));
-        	}
+        Parser parsGen = new Parser(inputFile);
+        Code codes = new Code();
+        String final_code = "";
+        while(parsGen.advance()){
         	
-        	
+        	final_code = "";
+	
+        	if (parsGen.commandType(parsGen.command()) == CommandType.A_COMMAND){
+        		
+            	String symbol = parsGen.symbol(parsGen.command());
+            	
+        		if (!(symbol.charAt(0)>47 && symbol.charAt(0)<58)){
+ 
+        			
+        			String value =String.valueOf(table.getAddress(symbol));	
+        			
+        			final_code = "000" + codes.toBinary(value);
+        			
+        		} else {
+        			
+        			final_code = "000" + codes.toBinary(symbol);	
+        		}
+        		outHACK.println(final_code);
+        		
+        	} else if(parsGen.commandType(parsGen.command()) == CommandType.C_COMMAND) {
+        		
+               	String[] mnemnonic = parsGen.instruction(parsGen.command());
+        		final_code = "10"+ codes.comp(mnemnonic)+codes.dest(mnemnonic)+codes.jump(mnemnonic);
+        		outHACK.println(final_code);
+
+        	}
+        	        	 
         }
     }
 
