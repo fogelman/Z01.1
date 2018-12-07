@@ -45,33 +45,33 @@ public class Assemble {
      * Dependencia : Parser, SymbolTable
      */
     public void fillSymbolTable() throws FileNotFoundException, IOException {
-	linhaTemp = 0;
-	Parser parsLabel = new Parser(inputFile);
-	while (parsLabel.advance()){
-		if (parsLabel.commandType(parsLabel.command()) == L_COMMAND){
-			String label = parsLabel.label(parsLabel.command());
-			if (!table.contains(label)){
-				table.addEntry(label, linha);
+        int linhaTemp = 0;
+        Parser parsLabel = new Parser(inputFile);
+        while (parsLabel.advance()){
+            if (parsLabel.commandType(parsLabel.command()) == Parser.CommandType.L_COMMAND){
+                String label = parsLabel.label(parsLabel.command());
+                if (!table.contains(label)){
+                    table.addEntry(label, linhaTemp);
+                }
+            }
+            else{
+                linhaTemp += 1;
             }
         }
-		else{
-			linha += 1;
-	    }
-    }
-    ramTemp = 16;
-    Parser parsSymbol = new Parser(inputFile);
-    while (parsSymbol.advance()){
-        if (parsSymbol.commandType(parsSymbol.command()) == A_COMMAND){
-            String symbol = parsSymbol.symbol(parsSymbol.command());
-            if (!(symbol.charAt(0)>47 && symbol.charAt(0)<58)){ //if not number
-                if (!table.contains(symbol)){
-                    table.addEntry(symbol, ramTemp);
-                    ramTemp += 1;
+        int ramTemp = 16;
+        Parser parsSymbol = new Parser(inputFile);
+        while (parsSymbol.advance()){
+            if (parsSymbol.commandType(parsSymbol.command()) == Parser.CommandType.A_COMMAND){
+                String symbol = parsSymbol.symbol(parsSymbol.command());
+                if (!(symbol.charAt(0)>47 && symbol.charAt(0)<58)){ //if not number
+                    if (!table.contains(symbol)){
+                        table.addEntry(symbol, ramTemp);
+                        ramTemp += 1;
+                    }
                 }
             }
         }
     }
-}
 
     /**
      * Segundo passo para a geração do código de máquina

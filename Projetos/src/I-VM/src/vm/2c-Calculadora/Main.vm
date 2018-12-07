@@ -1,4 +1,4 @@
-// ---------------------------------  
+// ---------------------------------
 // Rafael Corsi @ insper . edu . br
 //              2018a
 // ---------------------------------
@@ -6,7 +6,7 @@
 // Projeto      : Projeto I-VM
 // File         : 2c-Calculadora
 //
-// Descritivo   : 
+// Descritivo   :
 //  Escreva um código em VM que realize a seguinte
 //  operação :
 //    15/5
@@ -24,6 +24,10 @@
 //  ****************************************************
 
 function Main.main 0
+push constant 15
+push constant 5
+call div 2
+pop temp 1
 
 label while
     goto while
